@@ -29,4 +29,5 @@ abstract class AA<T : ViewDataBinding> : AppCompatActivity() {
             Toast.makeText(this@AA, "asd", Toast.LENGTH_SHORT).show()
         }
     }
+
 }

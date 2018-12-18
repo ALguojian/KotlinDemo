@@ -10,7 +10,6 @@ class Main2Activity : BaseActivity<ActivityMain2Binding>() {
     }
 
     override fun get() {
-
         //创建对象，直接使用`
         Person("asdasdasdas").name
         mBinding!!.editText2.setOnClickListener {

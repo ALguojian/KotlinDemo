@@ -15,4 +15,11 @@ class Man {
     class Imgs {
         var age: Int = 0
     }
+
+    companion object {
+
+        fun run(){
+
+        }
+    }
 }
