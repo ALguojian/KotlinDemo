@@ -3,11 +3,13 @@ package com.alguojian.kotlindemo.activity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import org.jetbrains.anko.button
+import org.jetbrains.anko.sdk27.coroutines.onClick
+import org.jetbrains.anko.verticalLayout
 
 /**
  * ${Descript}
@@ -27,7 +29,19 @@ abstract class AA<T : ViewDataBinding> : AppCompatActivity() {
         view.setOnClickListener {
             val a = 5
             Toast.makeText(this@AA, "asd", Toast.LENGTH_SHORT).show()
+            aa()
         }
+    }
+
+    fun aa() {
+
+        verticalLayout {
+            //            val name=editText()
+            button("say hello") {
+                onClick { println("asdasda") }
+            }
+        }
+
     }
 
 }

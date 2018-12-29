@@ -52,13 +52,26 @@ class Aaa constructor(var nam: Boolean = false) {
             return field
         }
 
+    /**
+     * 创建stringBuild()，并调用toString()
+     */
+    fun alphabet() = buildString {
+
+        for (letter in 'A'..'Z') {
+            append(letter)
+        }
+        append("\n asdasdasds")
+    }
+
     fun main(array: Array<String>): ArrayList<Int> {
-        money = -5;
+        money = -5
         println("money=$money\n")
         return arrayListOf(2, 2)
 
         //声明一个数组，使用Array类，首字母大写
         var asd = Array(5, { it -> it + 3 })
+
+        var mapOf = mapOf("page" to 1, "num" to Any())
 
 
         //声明一个数组，和索引不产生关系，默认所有属性都可以为null，所以声明数组是需要添加类型，并且标注可以为null
@@ -67,7 +80,7 @@ class Aaa constructor(var nam: Boolean = false) {
         //和上面bbb效果等价
         var ccc = arrayOfNulls<Ac>(5)
 
-        var ddd = IntArray(4)
+        var ddd = IntArray(4) { it + 3 }
 
         //不等同于ddd，intarray和array没有任何关系
         var eee = arrayOfNulls<Int>(4)
@@ -78,6 +91,9 @@ class Aaa constructor(var nam: Boolean = false) {
         for (i in asd.indices) {
             println("asd[$i]=${asd.get(i)}")
         }
+
+        //移除重复的数据
+        eee.toSet()
 
         //声明多维数组，二行三列如下所示
         var fff = Array(2) { Array(2, { it -> it * it }) }
@@ -90,6 +106,14 @@ class Aaa constructor(var nam: Boolean = false) {
 
         var toList = ddd.toList()
         var toIntArray = toList.toIntArray()
+
+        for (i in toList.indices) {
+
+        }
+
+        toList.forEachIndexed { index, i ->  }
+
+        ggg.forEachIndexed { index, ints ->  }
 
         //伴随对象的方法，类似于java中的静态方法,可以带名字，也可以省略,如果不写名字，kotlin的伴随对象也有默认名字，companion
         Bbb.run()

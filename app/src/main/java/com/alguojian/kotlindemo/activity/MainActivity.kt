@@ -13,6 +13,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     }
 
+
     override fun setLayout(): Int {
         return R.layout.activity_main
     }
